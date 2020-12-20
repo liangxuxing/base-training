@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+
+p{
+  font-size: 100px;
+  color: grey;
+  position: relative;
+}
+
+p::after{
+  content: "不挑食的爱德华";
+  color: transparent;
+   position: absolute;
+   left: 0;
+   top: 0;
+   font-size: 100px;
+   background-image: linear-gradient(to right,red,yellow, #bbffaa, #B8FB0E, #519ABA,black);
+   background-clip: text;
+   -webkit-background-clip: text;
+   
+  clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);
+  -webkit-clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);
+  animation: spotlight 2s ease infinite;
+}
+
+/* 帧动画 */
+@keyframes spotlight{
+  0%{
+    clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);
+  }
+  50%{clip-path: polygon(120% 0%,100% 0%,110% 100%,90% 100%);}
+  100%{clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);}
+}
