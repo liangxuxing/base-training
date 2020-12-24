@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   background-color: #2d3436;
+}
+
+/* 不设高度，由内容高度撑开 */
+.container{
+    position: relative;
+    width: 300px;
+    padding: 24px;
+    background-color:   #2d3436 ;
+    color: #fff;
+}
+
+
+h1{
+    line-height: 42px;
+    font-size: 24px;
+}
+p{
+    padding-top: 20px;
+    line-height: 28px;
+    text-indent: 2em;
+}
+
+
+.container::before,.container::after{
+   position: absolute;
+   content: '';
+   top: -2px;
+   right: -2px;
+   left: -2px;
+   bottom: -2px;
+   background: linear-gradient(to top right, #B92B27, #2d3436, #1565c0);
+   z-index: -1;
+}
+
+.container::after{
+    filter: blur(22px);
+}
