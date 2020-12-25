@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #477583;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    /* background-color: blue; */
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: -68px 0 #6232bb, 68px 0 rgb(95, 214, 178);
+    animation: rotation 2s ease-in-out infinite;
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
