@@ -1,0 +1,55 @@
+:root{
+    --backgroundColor:#2c3e50
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+a.btn{
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    border: 4px solid;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.btn::after,.btn::before{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background-color: var(--backgroundColor);
+    /* 添加过度效果 */
+    transition: 1s linear;
+    /* 矩形变梯形 */
+   transform: skew(-30deg);
+}
+/* 给类添加伪元素 */
+.btn::after{
+    bottom: -4px;
+    left: 20%;
+}
+
+.btn::before{
+    top: -4px;
+    right: 20%;
+}
+/* 悬浮后再添加伪元素，并且伪元素的位置发生了改变，触发了过渡效果 */
+.btn:hover::after{
+    left: 80%;
+}
+.btn:hover::before{
+    right: 80%;
+}
